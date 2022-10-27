@@ -6,14 +6,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.junit.Assert;
-import org.openqa.selenium.support.ui.ISelect;
 import org.openqa.selenium.support.ui.Select;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 
 class ContactUs {
 
     public static void main(String[] args) {
-        System.setProperty("webdriver.chrome.driver", "D:\\учеба\\Andersen JAVA\\Проекты\\дз 11.2\\lesson11\\src\\main\\resources\\chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("http://automationpractice.com/index.php");
         driver.manage().window().maximize();
