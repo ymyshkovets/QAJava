@@ -6,11 +6,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.junit.Assert;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 
 public class passwordRequired {
     public static void main(String[] args) {
-        System.setProperty("webdriver.chrome.driver", "D:\\учеба\\Andersen JAVA\\Проекты\\дз 11\\lesson10\\src\\main\\resources\\chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.way2automation.com/way2auto_jquery/registration.php#load_box");
         driver.manage().window().maximize();
