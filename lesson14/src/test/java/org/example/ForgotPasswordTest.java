@@ -1,13 +1,14 @@
 package org.example;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 
 public class ForgotPasswordTest {
@@ -25,6 +26,8 @@ public class ForgotPasswordTest {
     }
 
     @Test
+    @Description("Verify that forgot password link works")
+    @Feature("forgotPassword")
     public void forgotPassword() {
 
         ForgotPassword forgotPassword = new ForgotPassword(driver);

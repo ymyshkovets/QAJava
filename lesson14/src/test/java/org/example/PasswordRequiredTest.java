@@ -1,6 +1,8 @@
 package org.example;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
@@ -25,6 +27,10 @@ public class PasswordRequiredTest {
     }
 
     @Test
+    @Feature("Password")
+    @Description("Verify that password is required")
+
+
     public void passwordIsRequired() {
 
         PasswordRequired passwordRequired = new PasswordRequired(driver);

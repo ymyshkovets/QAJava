@@ -46,7 +46,7 @@ public class ForgotPassword {
         return messageExpected;
     }
 
-    public void close(){
+    public void close() {
         driver.close();
     }
 }
